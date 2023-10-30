@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct AuthView: View {
+   
     @State private var showSignupView = false
+    @State private var showLoginView = false
+    
     var body: some View {
        
         NavigationView {
@@ -44,7 +47,10 @@ struct AuthView: View {
                             .foregroundColor(.white)
                     })
                     .padding()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        showLoginView.toggle()
+                       
+                    }, label: {
                         Text(StringConstants.kLblLogin)
                             .font(FontScheme.kPoppinsMedium(size: 20))
                             .frame(width: getRelativeWidth(311),height: getRelativeHeight(60))
@@ -52,8 +58,8 @@ struct AuthView: View {
                             .foregroundColor(Color("SecondColorDark", bundle: nil))
                     })
                     
-                    NavigationLink("", destination: SignupView(), isActive: $showSignupView)
-                    
+                    NavigationLink("", destination:  SignupView(showSignupView: $showSignupView).navigationBarBackButtonHidden(true) , isActive: $showSignupView)
+                    NavigationLink("", destination:  LoginView(showLoginView: $showLoginView).navigationBarBackButtonHidden(true) , isActive: $showLoginView)
                     Spacer()
                 }
             }

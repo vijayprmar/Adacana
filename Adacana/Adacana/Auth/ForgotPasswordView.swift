@@ -1,30 +1,29 @@
 //
-//  LoginView.swift
+//  ForgotPasswordView.swift
 //  Adacana
 //
-//  Created by Vijay Parmar on 25/10/23.
+//  Created by Vijay Parmar on 30/10/23.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct ForgotPasswordView: View {
     @State  var email:String = ""
-    @State  var password:String = ""
-    @Binding var showLoginView: Bool
-    @State var showForgotPassView = false
+    @Binding var showForgotPassView: Bool
+    
     var body: some View {
         NavigationView {
             VStack{
                 HStack{
                     Button(action: {
-                        showLoginView = false
+                        showForgotPassView = false
                     }) {
                         Image(systemName: "arrow.left")
                             .foregroundColor(.black)
                     }
                     .padding(.leading,24)
                     Spacer()
-                    Text("Sign in")
+                    Text(StringConstants.kLblForgotPassword)
                         .font(FontScheme.kPoppinsMedium(size: 18))
                         .padding(.trailing,24)
                 }
@@ -33,18 +32,18 @@ struct LoginView: View {
                     VStack{
                       
                         VStack(alignment: .leading,spacing: 8){
-                            Text(StringConstants.kMsgThisIsYourCommunity)
+                            Text(StringConstants.kMsgHelpingOthersMeans)
                                     .font(FontScheme.kPoppinsBold(size: 36))
                                     .multilineTextAlignment(.leading)
-                                    .frame(width: 240)
-                            Text(StringConstants.kMsgOurCommunityIs3)
+                                    
+                            Text(StringConstants.kMsgIfYouAreAlways)
                                 .foregroundColor(.gray)
                                 
                                 
                         }
                         .padding(.leading,16)
                         .padding(.top,24)
-                        Image("img_logo_gray_50_01_113x116")
+                        Image("img_logo_gray_50_01_121x135")
                             .resizable()
                             .scaledToFit()
                         .frame(width: 150, height: 150)
@@ -60,31 +59,20 @@ struct LoginView: View {
                             .padding(.leading)
                             .padding(.trailing)
                             .padding(.bottom)
-                        SecureField("Password",text: $password)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: getRelativeHeight(60))
-                            .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("LightGray", bundle: nil), style: StrokeStyle(lineWidth: 1.0)))
-                           
-                            .padding(.leading)
-                            .padding(.trailing)
+                       
                             
-                        Button(action: {
-                            showForgotPassView.toggle()
-                        }, label: {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                          
-                                Text(StringConstants.kMsgForgotPassword)
-                                    .font(FontScheme.kPoppinsMedium(size: 16))
-                                    .foregroundColor(.red)
+                                Text(StringConstants.kMsgLoremIpsumDolor)
+                                    .font(FontScheme.kPoppinsRegular(size: 14))
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(.gray)
                                     .padding()
                                 Spacer()
                          
                         })
-                        NavigationLink("", destination:  ForgotPasswordView(showForgotPassView: $showForgotPassView).navigationBarBackButtonHidden(true) , isActive: $showForgotPassView)
-                        
-            
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text(StringConstants.kLblNext)
+                            Text(StringConstants.kLblStart)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: getRelativeHeight(60))
                                 .background(Color("Themes", bundle: nil).cornerRadius(10))
@@ -95,36 +83,16 @@ struct LoginView: View {
                      //   .frame(width: .infinity)
                      
                     }
-                    HStack(alignment: .center,spacing: 4){
-                        Text(StringConstants.kMsgDonTHaveAnAccount)
-                            .frame(alignment: .leading)
-                            .padding(.leading)
-                            .padding(.bottom)
-                            .font(FontScheme.kPoppinsRegular(size: 16))
-                           
-                            .foregroundColor(.gray)
-                        
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            VStack{
-                                Text(StringConstants.kLblSignup2)
-                                    .font(FontScheme.kPoppinsMedium(size: 16))
-                                    .foregroundColor(.red)
-                                Spacer()
-                            }
-                        })
-                    }
-                    .padding(.leading)
-                    .padding(.trailing)
+                   
                 }
                 
             }
-           
+
         }
         
     }
 }
 
 #Preview {
-    
-    LoginView(showLoginView: .constant(true))
+    ForgotPasswordView(showForgotPassView: .constant(true))
 }
