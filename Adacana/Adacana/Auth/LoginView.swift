@@ -12,6 +12,7 @@ struct LoginView: View {
     @State  var password:String = ""
     @Binding var showLoginView: Bool
     @State var showForgotPassView = false
+    
     var body: some View {
         NavigationView {
             VStack{

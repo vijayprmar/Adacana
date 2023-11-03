@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		6F0BAAD52AEFC26800DC8E50 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BAAD42AEFC26800DC8E50 /* ForgotPasswordView.swift */; };
 		6F0BAAD82AEFC5C500DC8E50 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BAAD72AEFC5C500DC8E50 /* HomeView.swift */; };
+		6F46A11D2AF4D3E30027D42B /* PersonalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F46A11C2AF4D3E30027D42B /* PersonalityView.swift */; };
+		6F46A1202AF5175B0027D42B /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F46A11F2AF5175B0027D42B /* DatePickerTextField.swift */; };
 		6F9351342AE6551E00AD1C75 /* AdacanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9351332AE6551E00AD1C75 /* AdacanaApp.swift */; };
-		6F9351362AE6551E00AD1C75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9351352AE6551E00AD1C75 /* ContentView.swift */; };
 		6F9351382AE6551F00AD1C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9351372AE6551F00AD1C75 /* Assets.xcassets */; };
 		6F93513B2AE6551F00AD1C75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F93513A2AE6551F00AD1C75 /* Preview Assets.xcassets */; };
 		6F9351472AE657B300AD1C75 /* PoppinsMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F9351432AE657B300AD1C75 /* PoppinsMedium.ttf */; };
@@ -32,9 +33,10 @@
 /* Begin PBXFileReference section */
 		6F0BAAD42AEFC26800DC8E50 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		6F0BAAD72AEFC5C500DC8E50 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6F46A11C2AF4D3E30027D42B /* PersonalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityView.swift; sourceTree = "<group>"; };
+		6F46A11F2AF5175B0027D42B /* DatePickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		6F9351302AE6551E00AD1C75 /* Adacana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adacana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9351332AE6551E00AD1C75 /* AdacanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdacanaApp.swift; sourceTree = "<group>"; };
-		6F9351352AE6551E00AD1C75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F9351372AE6551F00AD1C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F93513A2AE6551F00AD1C75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F9351432AE657B300AD1C75 /* PoppinsMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoppinsMedium.ttf; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				6F0BAAD72AEFC5C500DC8E50 /* HomeView.swift */,
+				6F46A11C2AF4D3E30027D42B /* PersonalityView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -99,7 +102,6 @@
 				6F93514B2AE66B5900AD1C75 /* Splash */,
 				6F9351412AE657B300AD1C75 /* Resources */,
 				6F9351332AE6551E00AD1C75 /* AdacanaApp.swift */,
-				6F9351352AE6551E00AD1C75 /* ContentView.swift */,
 				6F9351372AE6551F00AD1C75 /* Assets.xcassets */,
 				6F9351392AE6551F00AD1C75 /* Preview Content */,
 				6F93515F2AE8EB4E00AD1C75 /* Helper */,
@@ -168,6 +170,7 @@
 		6F93515F2AE8EB4E00AD1C75 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6F46A11F2AF5175B0027D42B /* DatePickerTextField.swift */,
 				6F93515D2AE8EB4A00AD1C75 /* Helper.swift */,
 			);
 			path = Helper;
@@ -249,12 +252,13 @@
 			files = (
 				6F9351592AE672E400AD1C75 /* FontScheme.swift in Sources */,
 				6F0BAAD82AEFC5C500DC8E50 /* HomeView.swift in Sources */,
+				6F46A11D2AF4D3E30027D42B /* PersonalityView.swift in Sources */,
 				6F93515B2AE672E400AD1C75 /* AppConstants.swift in Sources */,
 				6F93515A2AE672E400AD1C75 /* StringScheme.swift in Sources */,
-				6F9351362AE6551E00AD1C75 /* ContentView.swift in Sources */,
 				6F9351572AE672E400AD1C75 /* role.swift in Sources */,
 				6F9351342AE6551E00AD1C75 /* AdacanaApp.swift in Sources */,
 				6F9351632AE943E800AD1C75 /* LoginView.swift in Sources */,
+				6F46A1202AF5175B0027D42B /* DatePickerTextField.swift in Sources */,
 				6F9351582AE672E400AD1C75 /* ColorConstants.swift in Sources */,
 				6F0BAAD52AEFC26800DC8E50 /* ForgotPasswordView.swift in Sources */,
 				6F93515E2AE8EB4A00AD1C75 /* Helper.swift in Sources */,
